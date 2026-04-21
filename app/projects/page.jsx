@@ -12,7 +12,7 @@ export default function ProjectsPage() {
       title: "E-Commerce Platform",
       description: "Full-featured e-commerce store with product catalog, cart, checkout, and payment integration.",
       tags: ["Next.js", "React", "MongoDB", "Stripe"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-shopping-cart",
       gradient: "from-purple-400 to-pink-400"
     },
@@ -21,16 +21,17 @@ export default function ProjectsPage() {
       title: "Q-Commerce Solution",
       description: "Quick commerce platform with real-time inventory, order tracking, and delivery management.",
       tags: ["Next.js", "Real-time", "Maps API", "PostgreSQL"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-truck-fast",
-      gradient: "from-cyan-400 to-blue-400"
+      gradient: "from-cyan-400 to-blue-400",
+      video: "/videos/nextjs/Q-Commerce Solution.mp4"
     },
     {
       id: 3,
       title: "Multi-Vendor Marketplace",
       description: "Scalable marketplace connecting multiple sellers with customers, vendor dashboards, and analytics.",
       tags: ["Next.js", "Node.js", "AWS", "Socket.io"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-store",
       gradient: "from-green-400 to-teal-400"
     },
@@ -39,16 +40,17 @@ export default function ProjectsPage() {
       title: "Real Estate Platform",
       description: "Property listing platform with advanced search, property details, and agent management system.",
       tags: ["Next.js", "Google Maps", "MongoDB", "Cloudinary"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-house",
-      gradient: "from-orange-400 to-red-400"
+      gradient: "from-orange-400 to-red-400",
+      video: "/videos/nextjs/real-estate.mp4"
     },
     {
       id: 5,
       title: "Food/Restaurant System",
       description: "Complete restaurant management with online ordering, delivery tracking, and kitchen dashboard.",
       tags: ["Next.js", "React", "Firebase", "Stripe"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-utensils",
       gradient: "from-indigo-400 to-purple-400"
     },
@@ -57,7 +59,7 @@ export default function ProjectsPage() {
       title: "Fashion E-Commerce",
       description: "Modern clothing store with product filters, size guides, wishlists, and integrated inventory.",
       tags: ["Next.js", "GraphQL", "Shopify", "Tailwind"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-shirt",
       gradient: "from-pink-400 to-rose-400"
     },
@@ -66,58 +68,64 @@ export default function ProjectsPage() {
       title: "Home Appliances Shop",
       description: "E-commerce platform for home appliances with detailed specs, reviews, and warranty tracking.",
       tags: ["Next.js", "MongoDB", "Razorpay", "Node.js"],
-      category: "Next.js",
+      category: "Full-Stack",
       icon: "fas fa-plug",
-      gradient: "from-blue-400 to-cyan-400"
+      gradient: "from-blue-400 to-cyan-400",
+      video: "/videos/nextjs/home-appliances.mp4"
     },
     {
       id: 8,
-      title: "AI Integration System",
-      description: "Claude Code & OpenAI SDK integration for intelligent automation and AI-powered features.",
-      tags: ["OpenAI", "Claude", "Node.js", "Next.js"],
-      category: "AI",
-      icon: "fas fa-brain",
-      gradient: "from-purple-500 to-pink-500"
+      title: "Frontend Development Showcase",
+      description: "A curated showcase of responsive frontend interfaces and UI components built with modern frameworks and design systems.",
+      tags: ["React", "Next.js", "Tailwind", "CSS"],
+      category: "Full-Stack",
+      icon: "fas fa-layer-group",
+      gradient: "from-pink-400 to-rose-500",
+      video: "/videos/Frontend.mp4"
     },
     {
       id: 9,
-      title: "n8n Workflow Automation",
-      description: "No-code automation workflows with n8n integration for business process automation.",
-      tags: ["n8n", "Webhooks", "Integration", "Automation"],
-      category: "Automation",
-      icon: "fas fa-gears",
-      gradient: "from-green-500 to-emerald-500"
+      title: "Claude Code Projects",
+      description: "AI-assisted software projects developed using Claude Code CLI, leveraging agentic AI for rapid end-to-end development workflows.",
+      tags: ["Claude Code", "AI", "Node.js", "TypeScript"],
+      category: "Agentic AI",
+      icon: "fas fa-brain",
+      gradient: "from-purple-500 to-pink-500",
+      video: "/videos/Claude_Code_s_Projects.mp4"
     },
     {
       id: 10,
-      title: "Lovable Projects",
-      description: "Interactive and engaging frontend projects built with modern React and Tailwind CSS.",
-      tags: ["React", "Tailwind", "Lovable", "JavaScript"],
-      category: "Frontend",
-      icon: "fas fa-heart",
-      gradient: "from-red-400 to-pink-500"
+      title: "n8n Automation Workflows",
+      description: "Business process automation pipelines built with n8n, connecting apps and services through visual workflow automation and webhooks.",
+      tags: ["n8n", "Webhooks", "API Integration", "Automation"],
+      category: "Automation",
+      icon: "fas fa-gears",
+      gradient: "from-green-500 to-emerald-500",
+      video: "/videos/n8n_projects.mp4"
     },
     {
       id: 11,
-      title: "Replit Projects",
-      description: "Various coding projects and educational tools built and hosted on Replit platform.",
-      tags: ["JavaScript", "Python", "React", "Replit"],
-      category: "Dev Tools",
-      icon: "fas fa-code",
-      gradient: "from-amber-400 to-orange-500"
+      title: "Lovable AI Projects",
+      description: "Full-stack web applications rapidly built using Lovable's AI-powered development platform with modern UI and backend integration.",
+      tags: ["Lovable", "React", "Supabase", "Tailwind"],
+      category: "Full-Stack",
+      icon: "fas fa-heart",
+      gradient: "from-red-400 to-pink-500",
+      video: "/videos/Lovable_s_Projects.mp4"
     },
     {
-      id: 12,
-      title: "CLI Tools & Qwen Gemini",
-      description: "Command-line tools and integration with Qwen, Gemini, and other LLM APIs.",
-      tags: ["CLI", "Qwen", "Gemini", "Node.js"],
-      category: "Tools",
-      icon: "fas fa-terminal",
-      gradient: "from-slate-500 to-gray-600"
-    }
+      id: 13,
+      title: "OpenAI SDK Portfolio",
+      description: "AI-powered portfolio projects built using the OpenAI SDK, showcasing GPT integrations and intelligent automation features.",
+      tags: ["OpenAI", "GPT", "Node.js", "Next.js"],
+      category: "Agentic AI",
+      icon: "fas fa-microchip",
+      gradient: "from-teal-400 to-emerald-500",
+      video: "/videos/OpenAI_SDK_Portfolio.mp4"
+    },
   ]
 
-  const categories = ['All', 'Next.js', 'AI', 'Automation', 'Frontend', 'Dev Tools', 'Tools']
+  const categories = ['All', 'Agentic AI', 'Automation', 'Full-Stack']
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
@@ -153,9 +161,20 @@ export default function ProjectsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
               <div key={project.id} className="card-hover rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-                <div className={`bg-gradient-to-br ${project.gradient} h-48 flex items-center justify-center`}>
-                  <i className={`${project.icon} text-6xl text-white opacity-70`}></i>
-                </div>
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    className="w-full h-48 object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                ) : (
+                  <div className={`bg-gradient-to-br ${project.gradient} h-48 flex items-center justify-center`}>
+                    <i className={`${project.icon} text-6xl text-white opacity-70`}></i>
+                  </div>
+                )}
                 <div className="p-6">
                   <span className="inline-block text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium mb-3">
                     {project.category}
@@ -182,6 +201,7 @@ export default function ProjectsPage() {
               <p className="text-xl text-gray-600">No projects found in this category.</p>
             </div>
           )}
+
         </div>
       </div>
     </main>

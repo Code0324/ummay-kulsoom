@@ -1,166 +1,196 @@
 'use client'
 
-import { useState } from 'react'
-
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Here you would normally send the form data to your backend
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
-  }
-
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Let's Work Together</h2>
-          <p className="text-xl text-gray-600">Have a project in mind? Let's discuss how I can help.</p>
+    <section id="contact" style={{
+      padding: '80px 24px',
+      display: 'flex',
+      justifyContent: 'center',
+      position: 'relative',
+      zIndex: 1,
+    }}>
+      <div style={{
+        width: '100%',
+        maxWidth: '500px',
+        borderRadius: '28px',
+        background: 'rgba(255, 255, 255, 0.5)',
+        backdropFilter: 'blur(40px) saturate(200%)',
+        WebkitBackdropFilter: 'blur(40px) saturate(200%)',
+        border: '1px solid rgba(255, 255, 255, 0.88)',
+        boxShadow: `
+          inset 0 1px 0 rgba(255,255,255,0.98),
+          inset 0 -1px 0 rgba(0,0,0,0.02),
+          0 20px 60px rgba(0,0,0,0.08),
+          0 4px 12px rgba(0,0,0,0.04)
+        `,
+        padding: '44px 36px',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+
+        {/* Inner shine — top edge */}
+        <div style={{
+          position: 'absolute',
+          top: 0, left: '10%',
+          width: '80%', height: '1px',
+          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.95), transparent)',
+          pointerEvents: 'none',
+        }}/>
+
+        <h2 style={{
+          textAlign: 'center',
+          fontSize: '28px',
+          fontWeight: '900',
+          marginBottom: '8px',
+          letterSpacing: '0.04em',
+        }}>
+          LET&apos;S WORK TOGETHER
+        </h2>
+
+        <p style={{
+          textAlign: 'center',
+          color: 'rgba(26,10,0,0.6)',
+          fontSize: '14px',
+          marginBottom: '36px',
+        }}>
+          Have a project in mind? Let&apos;s build something great.
+        </p>
+
+        {/* Name + Email row */}
+        <div style={{ display: 'flex', gap: '12px', marginBottom: '14px' }}>
+          <input
+            type="text"
+            placeholder="Name"
+            style={{
+              flex: 1,
+              padding: '14px 18px',
+              borderRadius: '14px',
+              background: 'rgba(255,255,255,0.65)',
+              border: '1px solid rgba(255,140,0,0.25)',
+              color: '#1a0a00',
+              fontSize: '14px',
+              outline: 'none',
+              transition: 'border 0.2s',
+            }}
+            onFocus={e => e.target.style.border = '1px solid rgba(255,140,0,0.6)'}
+            onBlur={e => e.target.style.border = '1px solid rgba(255,140,0,0.25)'}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            style={{
+              flex: 1,
+              padding: '14px 18px',
+              borderRadius: '14px',
+              background: 'rgba(255,255,255,0.65)',
+              border: '1px solid rgba(255,140,0,0.25)',
+              color: '#1a0a00',
+              fontSize: '14px',
+              outline: 'none',
+              transition: 'border 0.2s',
+            }}
+            onFocus={e => e.target.style.border = '1px solid rgba(255,140,0,0.6)'}
+            onBlur={e => e.target.style.border = '1px solid rgba(255,140,0,0.25)'}
+          />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-white flex-shrink-0 mt-1">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Email</h3>
-                <p className="text-gray-600">ummay.kulsoom@example.com</p>
-              </div>
-            </div>
+        {/* Message */}
+        <textarea
+          placeholder="Message"
+          rows={5}
+          style={{
+            width: '100%',
+            padding: '14px 18px',
+            borderRadius: '14px',
+            background: 'rgba(255,255,255,0.65)',
+            border: '1px solid rgba(255,140,0,0.25)',
+            color: '#1a0a00',
+            fontSize: '14px',
+            outline: 'none',
+            resize: 'none',
+            marginBottom: '20px',
+            transition: 'border 0.2s',
+            boxSizing: 'border-box',
+          }}
+          onFocus={e => e.target.style.border = '1px solid rgba(255,140,0,0.6)'}
+          onBlur={e => e.target.style.border = '1px solid rgba(255,140,0,0.25)'}
+        />
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 flex items-center justify-center text-white flex-shrink-0 mt-1">
-                <i className="fas fa-phone"></i>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Phone</h3>
-                <p className="text-gray-600">0324 9208788</p>
-              </div>
-            </div>
+        {/* Send button */}
+        <button style={{
+          width: '100%',
+          padding: '15px',
+          borderRadius: '14px',
+          background: 'linear-gradient(135deg,#FF8C00,#FFD700)',
+          border: 'none',
+          color: '#fff',
+          fontSize: '15px',
+          fontWeight: '800',
+          letterSpacing: '0.1em',
+          cursor: 'pointer',
+          boxShadow: '0 8px 24px rgba(255,140,0,0.35), inset 0 1px 0 rgba(255,255,255,0.3)',
+          transition: 'transform 0.2s, box-shadow 0.2s',
+        }}
+          onMouseEnter={e => {
+            e.currentTarget.style.transform = 'translateY(-2px)'
+            e.currentTarget.style.boxShadow = '0 16px 40px rgba(255,140,0,0.45)'
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.transform = 'translateY(0)'
+            e.currentTarget.style.boxShadow = '0 8px 24px rgba(255,140,0,0.35)'
+          }}
+        >
+          SEND
+        </button>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-red-400 flex items-center justify-center text-white flex-shrink-0 mt-1">
-                <i className="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Location</h3>
-                <p className="text-gray-600">Nishter Road, Karachi, Pakistan</p>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="pt-8 border-t-2 border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Connect With Me</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white hover:shadow-lg transition">
-                  <i className="fab fa-linkedin text-lg"></i>
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-white hover:shadow-lg transition">
-                  <i className="fab fa-github text-lg"></i>
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white hover:shadow-lg transition">
-                  <i className="fab fa-twitter text-lg"></i>
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center text-white hover:shadow-lg transition">
-                  <i className="fab fa-instagram text-lg"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="glass-effect rounded-2xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Your Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="John Doe"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Your Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="john@example.com"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Subject</label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Let's discuss a project"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell me about your project..."
-                  rows="5"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600 transition resize-none"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full gradient-button text-white px-6 py-3 rounded-lg font-bold text-lg"
-              >
-                <i className="fas fa-paper-plane mr-2"></i> Send Message
-              </button>
-
-              {submitted && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
-                  <span className="block sm:inline">Message sent successfully!</span>
-                </div>
-              )}
-            </form>
-          </div>
+        {/* Social icons row */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '16px',
+          marginTop: '28px',
+        }}>
+          {[
+            { href:'https://linkedin.com/in/ummay-kulsoom', img:'/images/social/linkedin-3d.jpg' },
+            { href:'https://twitter.com/codecrafftai324', img:'/images/social/twitter-3d.jpg' },
+          ].map((s, i) => (
+            <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
+              style={{
+                width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                transition: 'transform 0.2s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15) translateY(-3px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'scale(1) translateY(0)'}
+            >
+              <img src={s.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover' }}/>
+            </a>
+          ))}
+          <a href="https://github.com/Ummay480" target="_blank" rel="noopener noreferrer"
+            style={{
+              width: '40px', height: '40px', borderRadius: '50%',
+              background: 'radial-gradient(circle at 30% 30%, #555 0%, #24292e 60%, #111 100%)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+              transition: 'transform 0.2s',
+              textDecoration: 'none',
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15) translateY(-3px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'scale(1) translateY(0)'}
+          >
+            <i className="fab fa-github" style={{ color: '#fff', fontSize: '18px' }} />
+          </a>
         </div>
+
+        <p style={{
+          textAlign: 'center',
+          fontSize: '11px',
+          color: 'rgba(26,10,0,0.3)',
+          marginTop: '20px',
+        }}>
+          © 2026 Ummay Kulsoom. All Rights Reserved.
+        </p>
+
       </div>
     </section>
   )

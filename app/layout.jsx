@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import BackgroundBlobs from '@/components/BackgroundBlobs'
 
 export const metadata = {
   title: 'Ummay Kulsoom - Full-Stack Developer',
@@ -9,14 +10,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <BackgroundBlobs />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )

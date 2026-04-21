@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backdropBlur: {
+        xs: '2px',
+      },
       animation: {
         float: 'float 3s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
@@ -18,8 +21,8 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
         'pulse-glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(168, 85, 247, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(255, 140, 0, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(255, 180, 0, 0.55)' },
         },
         orbit: {
           'from': { transform: 'rotate(0deg) translateX(80px) rotate(0deg)' },

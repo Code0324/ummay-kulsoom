@@ -4,61 +4,100 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+const navLinks = [
+  { href: '/',          label: 'Home' },
+  { href: '/about',     label: 'About' },
+  { href: '/projects',  label: 'Projects' },
+  { href: '/skills',    label: 'Skills' },
+  { href: '/services',  label: 'Services' },
+  { href: '/contact',   label: 'Contact' },
+]
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
-  const toggleMenu = () => setIsOpen(!isOpen)
-
-  const isActive = (path) => pathname === path ? 'text-purple-600 font-semibold' : 'text-gray-700'
+  const isActive = (href) =>
+    pathname === href
+      ? 'text-orange-500 font-bold'
+      : ''
 
   return (
-    <nav className="fixed w-full top-0 z-50 glass-effect">
+    <nav className="fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold gradient-text">UK</Link>
+            <Link href="/" className="logo-link" style={{
+              fontSize: '22px',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              filter: 'drop-shadow(0 1px 6px rgba(255,80,0,0.4))',
+            }}>
+              Ummay Kulsoom
+            </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <Link href="/" className={`${isActive('/')} hover:text-purple-600 transition`}>Home</Link>
-            <Link href="/about" className={`${isActive('/about')} hover:text-purple-600 transition`}>About</Link>
-            <Link href="/projects" className={`${isActive('/projects')} hover:text-purple-600 transition`}>Projects</Link>
-            <Link href="/skills" className={`${isActive('/skills')} hover:text-purple-600 transition`}>Skills</Link>
-            <Link href="/contact" className={`${isActive('/contact')} hover:text-purple-600 transition`}>Contact</Link>
+          <div className="hidden md:flex space-x-6">
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${isActive(href)} transition`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
-          {/* Hire Me Button */}
-          <Link
-            href="/contact"
-            className="hidden md:block gradient-button text-white px-6 py-2 rounded-lg font-semibold"
+          {/* Resume Button */}
+          <a
+            href="/Ummay_Kulsoom_Resume.pdf"
+            download="Ummay_Kulsoom_Resume.pdf"
+            className="hidden md:block gradient-button px-6 py-2 font-semibold"
           >
-            Hire Me
-          </Link>
+            Resume
+          </a>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-700 text-2xl" onClick={toggleMenu}>
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-2xl font-bold"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <i className={`fas fa-${isOpen ? 'times' : 'bars'}`}></i>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t">
-            <Link href="/" className="block px-4 py-2 text-gray-700 hover:bg-purple-50" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link href="/about" className="block px-4 py-2 text-gray-700 hover:bg-purple-50" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="/projects" className="block px-4 py-2 text-gray-700 hover:bg-purple-50" onClick={() => setIsOpen(false)}>Projects</Link>
-            <Link href="/skills" className="block px-4 py-2 text-gray-700 hover:bg-purple-50" onClick={() => setIsOpen(false)}>Skills</Link>
-            <Link href="/contact" className="block px-4 py-2 text-gray-700 hover:bg-purple-50" onClick={() => setIsOpen(false)}>Contact</Link>
-            <Link
-              href="/contact"
-              className="w-full gradient-button text-white px-4 py-2 rounded-lg font-semibold m-2 block text-center"
-              onClick={() => setIsOpen(false)}
-            >
-              Hire Me
-            </Link>
+          <div className="md:hidden border-t" style={{
+            background: 'rgba(255,255,255,0.92)',
+            backdropFilter: 'blur(20px)',
+            borderColor: 'rgba(255,180,0,0.2)',
+          }}>
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`block px-4 py-3 font-semibold transition hover:text-orange-500 ${isActive(href)}`}
+                style={{ color: pathname === href ? undefined : '#7a4500' }}
+                onClick={() => setIsOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
+            <div className="px-4 py-3">
+              <a
+                href="/Ummay_Kulsoom_Resume.pdf"
+                download="Ummay_Kulsoom_Resume.pdf"
+                className="block gradient-button font-semibold text-center w-full"
+                onClick={() => setIsOpen(false)}
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
         )}
       </div>

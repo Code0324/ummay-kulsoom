@@ -2,71 +2,107 @@
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left Column - Photo & Badges */}
-        <div className="space-y-6">
-          <div className="relative">
+    <section id="about">
+      <div className="about-grid">
+
+        {/* LEFT — AI Synergy image in glass card */}
+        <div className="about-image-col flex justify-center">
+          <div style={{
+            background: 'rgba(255,255,255,0.65)',
+            backdropFilter: 'blur(20px) saturate(1.5)',
+            WebkitBackdropFilter: 'blur(20px) saturate(1.5)',
+            borderRadius: '20px',
+            border: '1px solid rgba(255,255,255,0.9)',
+            padding: '24px',
+            boxShadow: '0 1px 0 rgba(255,255,255,0.95) inset, 0 20px 48px rgba(255,140,0,0.1), 0 8px 20px rgba(0,0,0,0.05)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '16px',
+            animation: 'float 5s ease-in-out infinite',
+            width: '100%',
+            maxWidth: '380px'
+          }}>
             <img
-              src="/images/profile-500x600.svg"
-              alt="Ummay Kulsoom"
-              className="w-full rounded-2xl shadow-2xl"
+              src="/images/ai-synergy.png"
+              alt="AI & Full-Stack Synergy"
+              style={{
+                width: '100%',
+                borderRadius: '12px',
+                filter: 'brightness(1.02) saturate(1.1)'
+              }}
             />
-            <div className="absolute -bottom-8 -right-8 glass-effect rounded-2xl p-6 space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-white font-bold">
-                  <i className="fas fa-rocket"></i>
-                </div>
-                <span className="font-semibold text-gray-800">Fast Learner</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 flex items-center justify-center text-white font-bold">
-                  <i className="fas fa-star"></i>
-                </div>
-                <span className="font-semibold text-gray-800">Quality Focused</span>
-              </div>
-            </div>
+            <p style={{
+              color: '#FF8C00',
+              fontSize: '13px',
+              fontWeight: '700',
+              textAlign: 'center',
+              WebkitTextFillColor: '#FF8C00',
+              letterSpacing: '0.02em'
+            }}>
+              AI &amp; Full-Stack Synergy
+            </p>
           </div>
         </div>
 
-        {/* Right Column - Content */}
-        <div className="space-y-6 lg:mt-16">
+        {/* RIGHT — text content */}
+        <div className="about-text-col space-y-6">
           <div>
-            <p className="text-purple-600 font-semibold text-lg mb-2">About Me</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ummay Kulsoom</h2>
+            <p className="font-semibold text-lg mb-2" style={{color:'#FF8C00', WebkitTextFillColor:'#FF8C00'}}>About Me</p>
+            <h2 className="text-4xl font-bold mb-4">Ummay Kulsoom</h2>
           </div>
 
-          <div className="space-y-4">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">📍 Location</h3>
-              <p className="text-gray-600">Nishter Road, Karachi</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">📱 Contact</h3>
-              <p className="text-gray-600">0324 9208788</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">🎓 Education</h3>
-              <p className="text-gray-600">Graduate of Karachi University</p>
-            </div>
-          </div>
-
-          <p className="text-lg text-gray-600 leading-relaxed border-t-2 border-gray-200 pt-6">
-            Full-Stack Developer with expertise in Next.js, React, and modern web technologies. Experienced in building scalable e-commerce platforms, marketplace solutions, and AI-integrated systems. Passionate about creating beautiful, functional web applications that solve real business problems.
+          <p className="text-base leading-relaxed" style={{color:'#5a3800'}}>
+            I'm Ummay Kulsoom — an AI Engineer and Full-Stack Developer
+            based in Karachi, Pakistan. I build intelligent, production-ready
+            applications using Claude API, Next.js, FastAPI, and modern AI tools.
+            Certified by GIAIC · Freelancing on Upwork at $25/hr.
           </p>
 
-          {/* Projects Overview */}
-          <div className="grid grid-cols-2 gap-4 pt-6 border-t-2 border-gray-200">
-            <div className="stat-card rounded-lg p-4">
-              <div className="text-2xl font-bold gradient-text">20+</div>
-              <div className="text-sm text-gray-600 mt-1">Total Projects</div>
+          <div className="space-y-3 text-sm" style={{color:'#7a4500'}}>
+            <div className="flex items-center gap-2">
+              <i className="fas fa-map-marker-alt" style={{color:'#FF8C00'}}></i>
+              <span style={{color:'#7a4500'}}>Nishter Road, Karachi, Pakistan</span>
             </div>
-            <div className="stat-card rounded-lg p-4">
+            <div className="flex items-center gap-2">
+              <i className="fas fa-phone" style={{color:'#FF8C00'}}></i>
+              <span style={{color:'#7a4500'}}>0324 9208788</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="fas fa-graduation-cap" style={{color:'#FF8C00'}}></i>
+              <span style={{color:'#7a4500'}}>Graduate of Karachi University</span>
+            </div>
+          </div>
+
+          {/* 4 colored buttons grid */}
+          <div className="about-buttons-grid">
+            <a href="#skills" className="about-btn btn-teal">
+              <span>&lt;/&gt;</span> Skills
+            </a>
+            <a href="#about" className="about-btn btn-pink">
+              <span>🎓</span> Education
+            </a>
+            <a href="#about" className="about-btn btn-orange">
+              <span>✦</span> Certifications
+            </a>
+            <a href="#skills" className="about-btn btn-cyan">
+              <span>📋</span> Expertise
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-4 pt-4 border-t" style={{borderColor:'rgba(255,180,0,0.2)'}}>
+            <div className="stat-card rounded-xl p-4">
+              <div className="text-2xl font-bold gradient-text">20+</div>
+              <div className="text-sm mt-1" style={{color:'#7a4500'}}>Total Projects</div>
+            </div>
+            <div className="stat-card rounded-xl p-4">
               <div className="text-2xl font-bold gradient-text">15+</div>
-              <div className="text-sm text-gray-600 mt-1">Satisfied Clients</div>
+              <div className="text-sm mt-1" style={{color:'#7a4500'}}>Satisfied Clients</div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )
