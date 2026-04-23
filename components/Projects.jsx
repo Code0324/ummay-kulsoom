@@ -7,6 +7,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-house",
     gradient: "linear-gradient(135deg, #fb923c, #f87171)",
+    image: "/images/project/Luxe Living - Real Estate.png",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-utensils",
     gradient: "linear-gradient(135deg, #818cf8, #c084fc)",
+    image: "/images/project/foodTuck Resturant Plateform.png",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-plug",
     gradient: "linear-gradient(135deg, #60a5fa, #22d3ee)",
+    image: "/images/project/Home Appliences.png",
   },
   {
     id: 4,
@@ -28,6 +31,15 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-palette",
     gradient: "linear-gradient(135deg, #f472b6, #fb7185)",
+    image: "/images/project/Portfolio Website.png",
+  },
+  {
+    id: 5,
+    title: "E-Commerce Platform",
+    category: "Full-Stack",
+    icon: "fas fa-shopping-cart",
+    gradient: "linear-gradient(135deg, #34d399, #059669)",
+    image: "/images/project/ECommerce.png",
   },
   {
     id: 6,
@@ -35,6 +47,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-file-pdf",
     gradient: "linear-gradient(135deg, #f87171, #ec4899)",
+    image: "/images/project/Resume Builder app.jpeg",
   },
   {
     id: 7,
@@ -42,6 +55,15 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-calculator",
     gradient: "linear-gradient(135deg, #fbbf24, #f97316)",
+    image: "/images/project/calculator app.png",
+  },
+  {
+    id: 12,
+    title: "Karachi Port Vessel Tracker",
+    category: "Full-Stack",
+    icon: "fas fa-ship",
+    gradient: "linear-gradient(135deg, #0ea5e9, #2563eb)",
+    image: "/images/project/Karchi port vessel tracker.jpeg",
   },
   {
     id: 8,
@@ -81,6 +103,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-truck-fast",
     gradient: "linear-gradient(135deg, #22d3ee, #60a5fa)",
+    image: "/images/project/Q-Commerce Solution.png",
   },
   {
     id: 14,
@@ -155,6 +178,12 @@ export default function Projects() {
                     src={project.video}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     autoPlay muted loop playsInline
+                  />
+                ) : project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 ) : (
                   <div style={{

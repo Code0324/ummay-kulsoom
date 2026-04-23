@@ -14,7 +14,8 @@ export default function ProjectsPage() {
       tags: ["Next.js", "React", "MongoDB", "Stripe"],
       category: "Full-Stack",
       icon: "fas fa-shopping-cart",
-      gradient: "from-purple-400 to-pink-400"
+      gradient: "from-purple-400 to-pink-400",
+      image: "/images/project/ECommerce.png",
     },
     {
       id: 2,
@@ -24,7 +25,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-truck-fast",
       gradient: "from-cyan-400 to-blue-400",
-      video: "/videos/nextjs/Q-Commerce Solution.mp4"
+      image: "/images/project/Q-Commerce Solution.png",
     },
     {
       id: 3,
@@ -37,22 +38,23 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
-      title: "Real Estate Platform",
+      title: "Luxe Living - Real Estate",
       description: "Property listing platform with advanced search, property details, and agent management system.",
       tags: ["Next.js", "Google Maps", "MongoDB", "Cloudinary"],
       category: "Full-Stack",
       icon: "fas fa-house",
       gradient: "from-orange-400 to-red-400",
-      video: "/videos/nextjs/real-estate.mp4"
+      image: "/images/project/Luxe Living - Real Estate.png",
     },
     {
       id: 5,
-      title: "Food/Restaurant System",
+      title: "FoodTuck - Restaurant Platform",
       description: "Complete restaurant management with online ordering, delivery tracking, and kitchen dashboard.",
       tags: ["Next.js", "React", "Firebase", "Stripe"],
       category: "Full-Stack",
       icon: "fas fa-utensils",
-      gradient: "from-indigo-400 to-purple-400"
+      gradient: "from-indigo-400 to-purple-400",
+      image: "/images/project/foodTuck Resturant Plateform.png",
     },
     {
       id: 6,
@@ -71,7 +73,47 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-plug",
       gradient: "from-blue-400 to-cyan-400",
-      video: "/videos/nextjs/home-appliances.mp4"
+      image: "/images/project/Home Appliences.png",
+    },
+    {
+      id: 15,
+      title: "Portfolio Website",
+      description: "Personal developer portfolio showcasing projects, skills, and experience with a modern design.",
+      tags: ["Next.js", "React", "Tailwind", "CSS"],
+      category: "Full-Stack",
+      icon: "fas fa-palette",
+      gradient: "from-pink-400 to-rose-400",
+      image: "/images/project/Portfolio Website.png",
+    },
+    {
+      id: 16,
+      title: "Resume Builder",
+      description: "Interactive resume builder that generates professional PDF resumes from user-provided details.",
+      tags: ["React", "PDF", "Next.js", "Tailwind"],
+      category: "Full-Stack",
+      icon: "fas fa-file-pdf",
+      gradient: "from-red-400 to-pink-500",
+      image: "/images/project/Resume Builder app.jpeg",
+    },
+    {
+      id: 17,
+      title: "Calculator Application",
+      description: "Clean and responsive calculator app with standard and scientific computation modes.",
+      tags: ["React", "JavaScript", "CSS"],
+      category: "Full-Stack",
+      icon: "fas fa-calculator",
+      gradient: "from-yellow-400 to-orange-400",
+      image: "/images/project/calculator app.png",
+    },
+    {
+      id: 18,
+      title: "Karachi Port Vessel Tracker",
+      description: "Real-time vessel tracking system for Karachi port, monitoring ship movements, arrivals, and departures.",
+      tags: ["Next.js", "Maps API", "Real-time", "Node.js"],
+      category: "Full-Stack",
+      icon: "fas fa-ship",
+      gradient: "from-sky-400 to-blue-600",
+      image: "/images/project/Karchi port vessel tracker.jpeg",
     },
     {
       id: 8,
@@ -169,6 +211,12 @@ export default function ProjectsPage() {
                     muted
                     loop
                     playsInline
+                  />
+                ) : project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
                   />
                 ) : (
                   <div className={`bg-gradient-to-br ${project.gradient} h-48 flex items-center justify-center`}>

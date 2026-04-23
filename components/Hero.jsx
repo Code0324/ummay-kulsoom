@@ -141,7 +141,7 @@ export default function Hero() {
 
         {/* BUBBLE IMAGE — white bg removed with mix-blend-mode */}
         <img
-          src="/images/bubble.png"
+          src="/images/ummay-profile.png"
           alt="Ummay Kulsoom"
           style={{
             width: '320px',
