@@ -57,7 +57,7 @@ export default function Contact() {
         </p>
 
         {/* Name + Email row */}
-        <div style={{ display: 'flex', gap: '12px', marginBottom: '14px' }}>
+        <div className="contact-form-row">
           <input
             type="text"
             placeholder="Name"
@@ -163,7 +163,15 @@ export default function Contact() {
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15) translateY(-3px)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1) translateY(0)'}
             >
-              <img src={s.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover' }}/>
+              <img
+                src={s.img}
+                alt={s.href.includes('linkedin') ? 'LinkedIn' : 'Twitter'}
+                width={40}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                style={{ width:'100%', height:'100%', objectFit:'cover' }}
+              />
             </a>
           ))}
           <a href="https://github.com/Ummay480" target="_blank" rel="noopener noreferrer"

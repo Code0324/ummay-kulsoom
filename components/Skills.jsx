@@ -21,19 +21,10 @@ const innerLogos = [
 
 export default function Skills() {
   return (
-    <section id="skills" style={{
-      padding: '80px 24px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '60px',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      flexWrap: 'wrap',
-    }}>
+    <section id="skills" className="skills-section">
 
       {/* LEFT — text content */}
-      <div style={{ flex: 1, minWidth: '280px', maxWidth: '480px' }}>
+      <div className="skills-text-col">
         <p style={{
           fontSize: '12px', fontWeight: '700', color: '#FF8C00',
           letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '8px',
@@ -70,11 +61,7 @@ export default function Skills() {
       </div>
 
       {/* RIGHT — Spinning Circular Logo Layout */}
-      <div style={{
-        position: 'relative',
-        width: '420px', height: '420px',
-        flexShrink: 0,
-      }}>
+      <div className="skills-ring-wrapper">
 
         {/* CENTER hub */}
         <div style={{
@@ -123,8 +110,15 @@ export default function Skills() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   padding: '10px',
                 }}>
-                  <img src={logo.icon} alt={logo.name} width={38} height={38}
-                    style={{ objectFit: 'contain' }} />
+                  <img
+                    src={logo.icon}
+                    alt={logo.name}
+                    width={38}
+                    height={38}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
               </div>
             )
@@ -160,8 +154,15 @@ export default function Skills() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   padding: '8px',
                 }}>
-                  <img src={logo.icon} alt={logo.name} width={32} height={32}
-                    style={{ objectFit: 'contain' }} />
+                  <img
+                    src={logo.icon}
+                    alt={logo.name}
+                    width={32}
+                    height={32}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
               </div>
             )

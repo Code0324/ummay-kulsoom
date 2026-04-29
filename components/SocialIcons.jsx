@@ -72,6 +72,10 @@ export default function SocialIcons({ size = 56 }) {
           <img
             src={s.img}
             alt={s.name}
+            width={size}
+            height={size}
+            loading="lazy"
+            decoding="async"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </a>

@@ -7,7 +7,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-house",
     gradient: "linear-gradient(135deg, #fb923c, #f87171)",
-    image: "/images/project/Luxe Living - Real Estate.png",
+    image: "/images/project/Luxe Living - Real Estate.jpg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-utensils",
     gradient: "linear-gradient(135deg, #818cf8, #c084fc)",
-    image: "/images/project/foodTuck Resturant Plateform.png",
+    image: "/images/project/foodTuck Resturant Plateform.jpg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-plug",
     gradient: "linear-gradient(135deg, #60a5fa, #22d3ee)",
-    image: "/images/project/Home Appliences.png",
+    image: "/images/project/Home Appliences.jpg",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-shopping-cart",
     gradient: "linear-gradient(135deg, #34d399, #059669)",
-    image: "/images/project/ECommerce.png",
+    image: "/images/project/ECommerce.jpg",
   },
   {
     id: 6,
@@ -103,7 +103,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-truck-fast",
     gradient: "linear-gradient(135deg, #22d3ee, #60a5fa)",
-    image: "/images/project/Q-Commerce Solution.png",
+    image: "/images/project/Q-Commerce Solution.jpg",
   },
   {
     id: 14,
@@ -183,6 +183,10 @@ export default function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={300}
+                    height={180}
+                    loading="lazy"
+                    decoding="async"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 ) : (

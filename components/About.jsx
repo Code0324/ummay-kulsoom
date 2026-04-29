@@ -24,10 +24,15 @@ export default function About() {
             maxWidth: '380px'
           }}>
             <img
-              src="/images/ai-synergy.png"
+              src="/images/ai-synergy.jpg"
               alt="AI & Full-Stack Synergy"
+              width={332}
+              height={332}
+              loading="lazy"
+              decoding="async"
               style={{
                 width: '100%',
+                height: 'auto',
                 borderRadius: '12px',
                 filter: 'brightness(1.02) saturate(1.1)'
               }}

@@ -13,18 +13,10 @@ export default function Hero() {
   ]
 
   return (
-    <section id="home" style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      padding: '80px 24px 40px',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      gap: '60px',
-    }}>
+    <section id="home" className="hero-section">
 
       {/* LEFT — text content */}
-      <div style={{ flex: 1, zIndex: 2 }}>
+      <div className="hero-content" style={{ zIndex: 2 }}>
 
         <p style={{
           fontSize: '18px', fontWeight: '500',
@@ -33,13 +25,7 @@ export default function Hero() {
           Hello 👋
         </p>
 
-        <h2 style={{
-          fontSize: '36px',
-          fontWeight: '900',
-          color: '#1a0a00',
-          lineHeight: 1.15,
-          marginBottom: '8px',
-        }}>
+        <h2 className="hero-name-heading">
           Hi, I&apos;m{' '}
           <span style={{
             background: 'linear-gradient(135deg, #FF6B00, #FFD700)',
@@ -51,12 +37,7 @@ export default function Hero() {
           </span>
         </h2>
 
-        <h3 style={{
-          fontSize: '18px',
-          fontWeight: '700',
-          color: '#FF8C00',
-          marginBottom: '14px',
-        }}>
+        <h3 className="hero-role-title">
           AI Engineer &amp; Full-Stack Developer
         </h3>
 
@@ -98,8 +79,15 @@ export default function Hero() {
                 e.currentTarget.style.border = '1px solid rgba(255,255,255,0.2)'
               }}
             >
-              <img src={tech.src} alt={tech.name} width={24} height={24}
-                style={{ objectFit:'contain' }}/>
+              <img
+                src={tech.src}
+                alt={tech.name}
+                width={24}
+                height={24}
+                loading="lazy"
+                decoding="async"
+                style={{ objectFit:'contain' }}
+              />
             </div>
           ))}
         </div>
@@ -129,23 +117,19 @@ export default function Hero() {
       </div>
 
       {/* RIGHT — bubble image + floating badges */}
-      <div style={{
-        position: 'relative',
-        width: '320px',
-        height: '320px',
-        flexShrink: 0,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+      <div className="hero-image-col">
 
-        {/* BUBBLE IMAGE — white bg removed with mix-blend-mode */}
+        {/* BUBBLE IMAGE */}
         <img
           src="/images/ummay-profile.png"
-          alt="Ummay Kulsoom"
+          alt="Ummay Kulsoom — AI Engineer & Full-Stack Developer"
+          width={320}
+          height={320}
+          fetchpriority="high"
+          decoding="async"
           style={{
-            width: '320px',
-            height: '320px',
+            width: '100%',
+            height: '100%',
             objectFit: 'contain',
             mixBlendMode: 'multiply',
             position: 'relative',
@@ -154,7 +138,7 @@ export default function Hero() {
         />
 
         {/* Floating badge — Claude API */}
-        <div style={{
+        <div className="hero-floating-badge" style={{
           position: 'absolute',
           top: '40px', left: '-10px',
           background: 'rgba(255,255,255,0.85)',
@@ -167,13 +151,19 @@ export default function Hero() {
           animation: 'float1 4s ease-in-out infinite',
           zIndex: 10, whiteSpace: 'nowrap',
         }}>
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg"
-            width={16} height={16}/>
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg"
+            alt="Anthropic"
+            width={16}
+            height={16}
+            loading="lazy"
+            decoding="async"
+          />
           <span style={{fontSize:'12px', fontWeight:'700', color:'#1a0a00'}}>Claude API</span>
         </div>
 
         {/* Floating badge — Python */}
-        <div style={{
+        <div className="hero-floating-badge" style={{
           position: 'absolute',
           top: '130px', right: '-20px',
           background: 'rgba(255,255,255,0.85)',
@@ -186,13 +176,19 @@ export default function Hero() {
           animation: 'float2 5s ease-in-out infinite',
           zIndex: 10, whiteSpace: 'nowrap',
         }}>
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/python.svg"
-            width={16} height={16}/>
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/python.svg"
+            alt="Python"
+            width={16}
+            height={16}
+            loading="lazy"
+            decoding="async"
+          />
           <span style={{fontSize:'12px', fontWeight:'700', color:'#1a0a00'}}>Python</span>
         </div>
 
         {/* Floating badge — FastAPI */}
-        <div style={{
+        <div className="hero-floating-badge" style={{
           position: 'absolute',
           bottom: '50px', left: '-14px',
           background: 'rgba(255,255,255,0.85)',
@@ -205,8 +201,14 @@ export default function Hero() {
           animation: 'float3 4.5s ease-in-out infinite',
           zIndex: 10, whiteSpace: 'nowrap',
         }}>
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/fastapi.svg"
-            width={16} height={16}/>
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/fastapi.svg"
+            alt="FastAPI"
+            width={16}
+            height={16}
+            loading="lazy"
+            decoding="async"
+          />
           <span style={{fontSize:'12px', fontWeight:'700', color:'#1a0a00'}}>FastAPI</span>
         </div>
 

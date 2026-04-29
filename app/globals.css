@@ -957,3 +957,205 @@ main,
 @media (max-width: 600px) {
   #projects > div:last-child { grid-template-columns: 1fr !important; }
 }
+
+/* ================================================================
+   IMAGE SKELETON LOADER — warm placeholder while images load
+   ================================================================ */
+
+img {
+  background: linear-gradient(90deg, #fef3e8 25%, #fff8f0 50%, #fef3e8 75%);
+  background-size: 200% 100%;
+}
+
+/* ================================================================
+   TOUCH TARGETS — all interactive elements min 44×44 on mobile
+   ================================================================ */
+
+@media (max-width: 768px) {
+  nav a, .about-btn, .gradient-button {
+    min-height: 44px;
+  }
+  nav button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — HERO SECTION
+   ================================================================ */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 24px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-image-col {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero fluid font sizes */
+.hero-name-heading {
+  font-size: clamp(1.6rem, 5vw, 2.25rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.hero-role-title {
+  font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+  font-weight: 700;
+  color: #FF8C00;
+  -webkit-text-fill-color: #FF8C00;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 36px;
+    padding: 100px 20px 48px;
+    min-height: unset;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-image-col {
+    width: 260px;
+    height: 260px;
+  }
+  .hero-floating-badge {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 88px 16px 40px;
+    gap: 28px;
+  }
+  .hero-image-col {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — SKILLS SECTION
+   ================================================================ */
+
+.skills-section {
+  padding: 80px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.skills-text-col {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+}
+
+.skills-ring-wrapper {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .skills-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 24px;
+  }
+  .skills-text-col {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-ring-wrapper {
+    transform: scale(0.72);
+    transform-origin: center center;
+    margin: -60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-ring-wrapper {
+    transform: scale(0.56);
+    margin: -90px 0;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — SERVICES GRID
+   ================================================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — CONTACT FORM ROW
+   ================================================================ */
+
+.contact-form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 580px) {
+  .contact-form-row {
+    flex-direction: column;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — CTA SECTION
+   ================================================================ */
+
+.cta-heading {
+  font-size: clamp(1.5rem, 5vw, 2.25rem) !important;
+}
+
+.cta-subtext {
+  font-size: clamp(0.875rem, 2.5vw, 1.25rem) !important;
+}
