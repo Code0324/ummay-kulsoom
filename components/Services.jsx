@@ -3,18 +3,66 @@
 import Image from 'next/image'
 
 const services = [
-  { title: 'Chatbot Development',        desc: 'Smart conversational bots for your business',         img: '/images/services/chatbot.png' },
-  { title: 'Telegram Bot',               desc: 'Custom bots for Telegram automation',                  img: '/images/services/Telegram Bot.png' },
-  { title: 'CRM & Social Media',         desc: 'Manage leads and grow your audience',                  img: '/images/services/CRM.png' },
-  { title: 'UI/UX Design',               desc: 'Beautiful, user-friendly interface design',            img: '/images/services/UI UX.png' },
-  { title: 'AI Agent',                   desc: 'Autonomous AI agents for complex tasks',               img: '/images/services/ai agency.png' },
-  { title: 'AI Automation',              desc: 'Streamline workflows with intelligent automation',      img: '/images/services/ai automtion.png' },
-  { title: 'SaaS AI',                    desc: 'AI-powered SaaS solutions built for scale',            img: '/images/services/saas ai.png' },
-  { title: 'Portfolio Website',          desc: 'Stunning personal portfolio websites',                  img: '/images/services/Portfolio.png' },
-  { title: 'Custom Dashboard',           desc: 'Data-driven dashboards for actionable insights',       img: '/images/services/Custom DashBord.png' },
-  { title: 'E-Commerce',                 desc: 'Full-featured online store solutions',                 img: '/images/services/Ecommerce.png' },
-  { title: 'n8n Workflow Automation',    desc: 'No-code automation pipelines with n8n',               img: '/images/services/n8n.png' },
-  { title: 'Mobile App',                 desc: 'Cross-platform mobile app development',                img: '/images/services/mob app.png' },
+  {
+    title: 'Chatbot Development',
+    desc: 'Smart conversational bots for your business',
+    img: '/images/services/chatbot.png',
+  },
+  {
+    title: 'Telegram Bot',
+    desc: 'Custom bots for Telegram automation',
+    img: '/images/services/telegram-bot.png',
+  },
+  {
+    title: 'CRM & Social Media Marketing',
+    desc: 'Manage leads and grow your audience',
+    img: '/images/services/crm.png',
+  },
+  {
+    title: 'UI/UX Design',
+    desc: 'Beautiful, user-friendly interface design',
+    img: '/images/services/uiux.png',
+  },
+  {
+    title: 'AI Agent',
+    desc: 'Autonomous AI agents for complex tasks',
+    img: '/images/services/ai-agent.png',
+  },
+  {
+    title: 'AI Automation',
+    desc: 'Streamline workflows with intelligent automation',
+    img: '/images/services/ai-automation.png',
+  },
+  {
+    title: 'SaaS AI',
+    desc: 'AI-powered SaaS solutions built for scale',
+    img: '/images/services/saas-ai.png',
+  },
+  {
+    title: 'Portfolio Website',
+    desc: 'Stunning personal portfolio websites',
+    img: '/images/services/portfolio.png',
+  },
+  {
+    title: 'Custom Dashboard',
+    desc: 'Data-driven dashboards for actionable insights',
+    img: '/images/services/custom-dashboard.png',
+  },
+  {
+    title: 'E-Commerce',
+    desc: 'Full-featured online store solutions',
+    img: '/images/services/ecommerce.png',
+  },
+  {
+    title: 'n8n Workflow Automation',
+    desc: 'No-code automation pipelines with n8n',
+    img: '/images/services/n8n-automation.png',
+  },
+  {
+    title: 'Mobile App',
+    desc: 'Cross-platform mobile app development',
+    img: '/images/services/mob-app.png',
+  },
 ]
 
 export default function Services() {
@@ -24,10 +72,24 @@ export default function Services() {
       className="py-20 px-6"
       style={{ background: 'linear-gradient(180deg, #0f0f1a 0%, #1a0a2e 100%)' }}
     >
-      {/* Section heading — inherits global h2 orange-gold gradient */}
-      <h2 className="text-center mb-3">Our Services</h2>
+      {/* Section title — orange-to-yellow gradient */}
+      <h2
+        className="text-center text-4xl font-black mb-3"
+        style={{
+          background: 'linear-gradient(90deg, #FF8C00, #FFD700)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          animation: 'none',
+        }}
+      >
+        Our Services
+      </h2>
 
-      <p className="text-center mb-12" style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1rem' }}>
+      <p
+        className="text-center mb-12 text-base"
+        style={{ color: 'rgba(255,255,255,0.55)' }}
+      >
         Comprehensive solutions tailored to your digital needs
       </p>
 
