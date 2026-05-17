@@ -119,11 +119,11 @@ export default function Hero() {
       {/* RIGHT — glass profile + floating badges */}
       <div className="hero-image-col">
 
-        {/* GLASSMORPHISM CIRCLE */}
+        {/* GLASSMORPHISM RECTANGLE */}
         <div style={{
           width: '100%',
           height: '100%',
-          borderRadius: '50%',
+          borderRadius: '28px',
           overflow: 'hidden',
           position: 'relative',
           zIndex: 2,

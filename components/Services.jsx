@@ -3,78 +3,26 @@
 import Image from 'next/image'
 
 const services = [
-  {
-    title: 'Chatbot Development',
-    desc: 'Smart conversational bots for your business',
-    img: '/images/services/chatbot.png',
-  },
-  {
-    title: 'Telegram Bot',
-    desc: 'Custom bots for Telegram automation',
-    img: '/images/services/telegram-bot.png',
-  },
-  {
-    title: 'CRM & Social Media Marketing',
-    desc: 'Manage leads and grow your audience',
-    img: '/images/services/crm.png',
-  },
-  {
-    title: 'UI/UX Design',
-    desc: 'Beautiful, user-friendly interface design',
-    img: '/images/services/uiux.png',
-  },
-  {
-    title: 'AI Agent',
-    desc: 'Autonomous AI agents for complex tasks',
-    img: '/images/services/ai-agent.png',
-  },
-  {
-    title: 'AI Automation',
-    desc: 'Streamline workflows with intelligent automation',
-    img: '/images/services/ai-automation.png',
-  },
-  {
-    title: 'SaaS AI',
-    desc: 'AI-powered SaaS solutions built for scale',
-    img: '/images/services/saas-ai.png',
-  },
-  {
-    title: 'Portfolio Website',
-    desc: 'Stunning personal portfolio websites',
-    img: '/images/services/portfolio.png',
-  },
-  {
-    title: 'Custom Dashboard',
-    desc: 'Data-driven dashboards for actionable insights',
-    img: '/images/services/custom-dashboard.png',
-  },
-  {
-    title: 'E-Commerce',
-    desc: 'Full-featured online store solutions',
-    img: '/images/services/ecommerce.png',
-  },
-  {
-    title: 'n8n Workflow Automation',
-    desc: 'No-code automation pipelines with n8n',
-    img: '/images/services/n8n-automation.png',
-  },
-  {
-    title: 'Mobile App',
-    desc: 'Cross-platform mobile app development',
-    img: '/images/services/mob-app.png',
-  },
+  { title: 'Chatbot Development',     img: '/images/services/chatbot.png',          cls: 'lv0'  },
+  { title: 'Telegram Bot',            img: '/images/services/telegram-bot.png',      cls: 'lv1'  },
+  { title: 'CRM & Social Media',      img: '/images/services/crm.png',               cls: 'lv2'  },
+  { title: 'UI/UX Design',            img: '/images/services/uiux.png',              cls: 'lv3'  },
+  { title: 'AI Agent',                img: '/images/services/ai-agent.png',          cls: 'lv4'  },
+  { title: 'AI Automation',           img: '/images/services/ai-automation.png',     cls: 'lv5'  },
+  { title: 'SaaS AI',                 img: '/images/services/saas-ai.png',           cls: 'lv6'  },
+  { title: 'Portfolio Website',       img: '/images/services/portfolio.png',         cls: 'lv7'  },
+  { title: 'Custom Dashboard',        img: '/images/services/custom-dashboard.png',  cls: 'lv8'  },
+  { title: 'E-Commerce',              img: '/images/services/ecommerce.png',         cls: 'lv9'  },
+  { title: 'n8n Automation',          img: '/images/services/n8n-automation.png',    cls: 'lv10' },
+  { title: 'Mobile App',              img: '/images/services/mob-app.png',           cls: 'lv11' },
 ]
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="py-20 px-6"
-      style={{ background: 'linear-gradient(180deg, #0f0f1a 0%, #1a0a2e 100%)' }}
-    >
-      {/* Section title — orange-to-yellow gradient */}
+    <section id="services" className="py-16 px-6" style={{ background: 'transparent' }}>
+
       <h2
-        className="text-center text-4xl font-black mb-3"
+        className="text-3xl font-bold text-center mb-3"
         style={{
           background: 'linear-gradient(90deg, #FF8C00, #FFD700)',
           WebkitBackgroundClip: 'text',
@@ -86,32 +34,39 @@ export default function Services() {
         Our Services
       </h2>
 
-      <p
-        className="text-center mb-12 text-base"
-        style={{ color: 'rgba(255,255,255,0.55)' }}
-      >
+      <p className="text-center text-sm text-gray-400 mb-12">
         Comprehensive solutions tailored to your digital needs
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-        {services.map((service, i) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
+        {services.map((service) => (
           <div
             key={service.title}
-            className="service-card group bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:scale-105 hover:border-orange-400/60 hover:shadow-lg hover:shadow-orange-500/20 cursor-default"
-            style={{ animationDelay: `${i * 80}ms` }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', transition: 'all 0.3s ease' }}
+            onMouseEnter={e => { e.currentTarget.style.filter = 'drop-shadow(0 0 14px rgba(249,115,22,0.45))'; e.currentTarget.style.transform = 'scale(1.06)' }}
+            onMouseLeave={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.transform = 'scale(1)' }}
           >
-            <div className="rounded-xl overflow-hidden mb-4 aspect-square">
+            <div className={service.cls} style={{ position: 'relative' }}>
               <Image
                 src={service.img}
                 alt={service.title}
-                width={400}
-                height={400}
-                loading="lazy"
-                className="w-full h-full object-cover"
+                width={220}
+                height={220}
+                unoptimized={true}
+                style={{ objectFit: 'contain', background: 'none' }}
               />
+              {/* Glow shadow under image */}
+              <div style={{
+                position: 'absolute', bottom: '-8px', left: '50%',
+                transform: 'translateX(-50%)',
+                width: '90px', height: '14px',
+                background: 'radial-gradient(ellipse, rgba(249,115,22,0.2) 0%, transparent 70%)',
+                filter: 'blur(5px)',
+              }} />
             </div>
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
+            <p style={{ fontSize: '13px', fontWeight: '600', textAlign: 'center', marginTop: '10px', color: '#1a0a00' }}>
+              {service.title}
+            </p>
           </div>
         ))}
       </div>

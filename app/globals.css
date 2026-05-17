@@ -1244,30 +1244,23 @@ img {
 }
 
 /* ================================================================
-   SERVICES DARK SECTION — animation + color overrides
+   SERVICES — levitation animation
    ================================================================ */
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes lev {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
 }
 
-.service-card {
-  animation: fadeInUp 0.5s ease both;
-}
-
-.service-card h3 {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  background: none !important;
-  animation: none !important;
-  font-size: 0.875rem;
-  line-height: 1.35;
-  margin-bottom: 4px;
-}
-
-.service-card p {
-  color: rgba(255, 255, 255, 0.55) !important;
-  font-size: 0.75rem;
-  line-height: 1.5;
-}
+.lv0  { animation: lev 3s ease-in-out infinite 0s; }
+.lv1  { animation: lev 3s ease-in-out infinite 0.25s; }
+.lv2  { animation: lev 3s ease-in-out infinite 0.5s; }
+.lv3  { animation: lev 3s ease-in-out infinite 0.75s; }
+.lv4  { animation: lev 3s ease-in-out infinite 1s; }
+.lv5  { animation: lev 3s ease-in-out infinite 1.25s; }
+.lv6  { animation: lev 3s ease-in-out infinite 1.5s; }
+.lv7  { animation: lev 3s ease-in-out infinite 1.75s; }
+.lv8  { animation: lev 3s ease-in-out infinite 2s; }
+.lv9  { animation: lev 3s ease-in-out infinite 2.25s; }
+.lv10 { animation: lev 3s ease-in-out infinite 2.5s; }
+.lv11 { animation: lev 3s ease-in-out infinite 2.75s; }
