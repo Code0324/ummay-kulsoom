@@ -116,26 +116,43 @@ export default function Hero() {
 
       </div>
 
-      {/* RIGHT — bubble image + floating badges */}
+      {/* RIGHT — glass profile + floating badges */}
       <div className="hero-image-col">
 
-        {/* BUBBLE IMAGE */}
-        <img
-          src="/images/ummay-profile.png"
-          alt="Ummay Kulsoom — AI Engineer & Full-Stack Developer"
-          width={320}
-          height={320}
-          fetchpriority="high"
-          decoding="async"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
-            mixBlendMode: 'multiply',
-            position: 'relative',
-            zIndex: 2,
-          }}
-        />
+        {/* GLASSMORPHISM CIRCLE */}
+        <div style={{
+          width: '100%',
+          height: '100%',
+          borderRadius: '50%',
+          overflow: 'hidden',
+          position: 'relative',
+          zIndex: 2,
+          background: 'rgba(255, 255, 255, 0.22)',
+          backdropFilter: 'blur(24px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+          border: '2px solid rgba(255, 255, 255, 0.65)',
+          boxShadow: `
+            inset 0 2px 0 rgba(255,255,255,0.9),
+            inset 0 -2px 0 rgba(0,0,0,0.04),
+            0 24px 64px rgba(255,140,0,0.18),
+            0 0 0 10px rgba(255,255,255,0.1)
+          `,
+        }}>
+          <img
+            src="/images/ummay-profile.png"
+            alt="Ummay Kulsoom — AI Engineer & Full-Stack Developer"
+            width={320}
+            height={320}
+            fetchpriority="high"
+            decoding="async"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+        </div>
 
         {/* Floating badge — Claude API */}
         <div className="hero-floating-badge" style={{
