@@ -1159,3 +1159,86 @@ img {
 .cta-subtext {
   font-size: clamp(0.875rem, 2.5vw, 1.25rem) !important;
 }
+
+/* ================================================================
+   RESPONSIVE — NAVBAR / FOOTER LOGO
+   ================================================================ */
+
+.navbar-logo {
+  font-size: clamp(15px, 4vw, 22px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  filter: drop-shadow(0 1px 6px rgba(255,80,0,0.4));
+}
+
+/* ================================================================
+   RESPONSIVE — SKILLS HEADING
+   ================================================================ */
+
+.skills-heading {
+  font-size: clamp(1.5rem, 4.5vw, 2.625rem) !important;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #1a0a00;
+  -webkit-text-fill-color: #1a0a00;
+  background: none !important;
+  animation: none !important;
+}
+
+/* ================================================================
+   RESPONSIVE — PROJECTS CAROUSEL
+   ================================================================ */
+
+.projects-card {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.projects-fade-left,
+.projects-fade-right {
+  width: 80px;
+}
+
+@media (max-width: 600px) {
+  .projects-card {
+    width: 240px;
+  }
+  .projects-fade-left,
+  .projects-fade-right {
+    width: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .projects-card {
+    width: 200px;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — CONTACT CARD PADDING
+   ================================================================ */
+
+.contact-card {
+  padding: 44px 36px;
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 32px 18px !important;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — FOOTER GRID
+   ================================================================ */
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-grid > div {
+    grid-column: span 1 !important;
+  }
+}

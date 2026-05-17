@@ -31,12 +31,7 @@ export default function Skills() {
         }}>
           Technologies
         </p>
-        <h2 style={{
-          fontSize: '42px', fontWeight: '900', lineHeight: '1.2',
-          marginBottom: '20px', color: '#1a0a00',
-          WebkitTextFillColor: '#1a0a00',
-          background: 'none', animation: 'none',
-        }}>
+        <h2 className="skills-heading">
           Work For All This<br/>
           <span style={{ color: '#FF8C00', WebkitTextFillColor: '#FF8C00' }}>Brand &amp; Client</span>
         </h2>

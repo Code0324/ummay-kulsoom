@@ -29,12 +29,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="logo-link" style={{
-              fontSize: '22px',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              filter: 'drop-shadow(0 1px 6px rgba(255,80,0,0.4))',
-            }}>
+            <Link href="/" className="logo-link navbar-logo">
               Ummay Kulsoom
             </Link>
           </div>

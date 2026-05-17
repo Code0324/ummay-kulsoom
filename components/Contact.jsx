@@ -9,7 +9,7 @@ export default function Contact() {
       position: 'relative',
       zIndex: 1,
     }}>
-      <div style={{
+      <div className="contact-card" style={{
         width: '100%',
         maxWidth: '500px',
         borderRadius: '28px',
@@ -23,7 +23,6 @@ export default function Contact() {
           0 20px 60px rgba(0,0,0,0.08),
           0 4px 12px rgba(0,0,0,0.04)
         `,
-        padding: '44px 36px',
         position: 'relative',
         overflow: 'hidden',
       }}>

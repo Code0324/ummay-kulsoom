@@ -129,13 +129,13 @@ export default function Projects() {
 
       <div style={{ overflow: 'hidden', position: 'relative' }}>
         {/* Fade edges */}
-        <div style={{
-          position: 'absolute', left: 0, top: 0, bottom: 0, width: '80px',
+        <div className="projects-fade-left" style={{
+          position: 'absolute', left: 0, top: 0, bottom: 0,
           background: 'linear-gradient(90deg, rgba(254,248,240,0.92), transparent)', zIndex: 2,
           pointerEvents: 'none',
         }}/>
-        <div style={{
-          position: 'absolute', right: 0, top: 0, bottom: 0, width: '80px',
+        <div className="projects-fade-right" style={{
+          position: 'absolute', right: 0, top: 0, bottom: 0,
           background: 'linear-gradient(-90deg, rgba(254,248,240,0.92), transparent)', zIndex: 2,
           pointerEvents: 'none',
         }}/>
@@ -152,8 +152,7 @@ export default function Projects() {
           onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
         >
           {[...realProjects, ...realProjects].map((project, i) => (
-            <div key={i} style={{
-              width: '300px', flexShrink: 0,
+            <div key={i} className="projects-card" style={{
               borderRadius: '20px',
               background: 'rgba(255,255,255,0.5)',
               backdropFilter: 'blur(20px) saturate(180%)',

@@ -7,14 +7,10 @@ export default function Footer() {
   return (
     <footer className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
+        <div className="footer-grid grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="logo-link" style={{
-              fontSize: '22px',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              filter: 'drop-shadow(0 1px 6px rgba(255,80,0,0.4))',
+            <Link href="/" className="logo-link navbar-logo" style={{
               display: 'inline-block',
               marginBottom: '8px',
             }}>
