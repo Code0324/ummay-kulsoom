@@ -1242,3 +1242,32 @@ img {
     grid-column: span 1 !important;
   }
 }
+
+/* ================================================================
+   SERVICES DARK SECTION — animation + color overrides
+   ================================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.service-card {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.service-card h3 {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: none !important;
+  animation: none !important;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.service-card p {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
