@@ -38,7 +38,7 @@ export default function Services() {
         Comprehensive solutions tailored to your digital needs
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto" style={{ gap: '32px', alignItems: 'start' }}>
         {services.map((service) => (
           <div
             key={service.title}
@@ -47,14 +47,16 @@ export default function Services() {
             onMouseLeave={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.transform = 'scale(1)' }}
           >
             <div className={service.cls} style={{ position: 'relative' }}>
-              <Image
-                src={service.img}
-                alt={service.title}
-                width={220}
-                height={220}
-                unoptimized={true}
-                style={{ objectFit: 'contain', background: 'none' }}
-              />
+              <div style={{ width: '160px', height: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  width={160}
+                  height={160}
+                  unoptimized={true}
+                  style={{ objectFit: 'contain', width: '160px', height: '160px', background: 'none' }}
+                />
+              </div>
               {/* Glow shadow under image */}
               <div style={{
                 position: 'absolute', bottom: '-8px', left: '50%',
@@ -64,7 +66,7 @@ export default function Services() {
                 filter: 'blur(5px)',
               }} />
             </div>
-            <p style={{ fontSize: '13px', fontWeight: '600', textAlign: 'center', marginTop: '10px', color: '#1a0a00' }}>
+            <p style={{ fontSize: '12px', fontWeight: '600', textAlign: 'center', marginTop: '8px', color: '#1a0a00', width: '160px' }}>
               {service.title}
             </p>
           </div>
