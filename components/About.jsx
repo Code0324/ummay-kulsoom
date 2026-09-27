@@ -5,7 +5,7 @@ export default function About() {
     <section id="about">
       <div className="about-grid">
 
-        {/* LEFT — AI Synergy image in glass card */}
+        {/* LEFT — About Me infographic in glass card */}
         <div className="about-image-col flex justify-center">
           <div style={{
             background: 'rgba(255,255,255,0.65)',
@@ -13,21 +13,20 @@ export default function About() {
             WebkitBackdropFilter: 'blur(20px) saturate(1.5)',
             borderRadius: '20px',
             border: '1px solid rgba(255,255,255,0.9)',
-            padding: '24px',
+            padding: '16px',
             boxShadow: '0 1px 0 rgba(255,255,255,0.95) inset, 0 20px 48px rgba(255,140,0,0.1), 0 8px 20px rgba(0,0,0,0.05)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '16px',
             animation: 'float 5s ease-in-out infinite',
             width: '100%',
-            maxWidth: '380px'
+            maxWidth: '560px'
           }}>
             <img
               src="/images/about-me.png"
-              alt="Ummay Kulsoom - Fullstack Developer & AI Engineer"
+              alt="Why work with Ummay Kulsoom - fullstack expertise, AI-powered solutions, problem-solving mindset, reliable communication"
               width={768}
-              height={512}
+              height={447}
               loading="lazy"
               decoding="async"
               style={{
@@ -37,16 +36,6 @@ export default function About() {
                 filter: 'brightness(1.02) saturate(1.1)'
               }}
             />
-            <p style={{
-              color: '#FF8C00',
-              fontSize: '13px',
-              fontWeight: '700',
-              textAlign: 'center',
-              WebkitTextFillColor: '#FF8C00',
-              letterSpacing: '0.02em'
-            }}>
-              AI &amp; Full-Stack Synergy
-            </p>
           </div>
         </div>
 
