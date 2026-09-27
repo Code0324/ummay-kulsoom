@@ -24,10 +24,10 @@ export default function About() {
             maxWidth: '380px'
           }}>
             <img
-              src="/images/ai-synergy.jpg"
-              alt="AI & Full-Stack Synergy"
-              width={332}
-              height={332}
+              src="/images/about-me.png"
+              alt="Ummay Kulsoom - Fullstack Developer & AI Engineer"
+              width={768}
+              height={512}
               loading="lazy"
               decoding="async"
               style={{
