@@ -407,8 +407,21 @@ nav button::after, header button::after {
 .btn-cyan   { background: linear-gradient(135deg, #12c2e9, #1de9b6) !important; }
 
 @media (max-width: 640px) {
-  .about-grid          { grid-template-columns: 1fr; }
+  .about-grid          { grid-template-columns: 1fr; gap: 40px; }
   .about-buttons-grid  { grid-template-columns: 1fr; }
+  .about-text-col h2 {
+    font-size: 1.875rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-grid {
+    padding: 60px 16px;
+    gap: 32px;
+  }
+  .about-text-col h2 {
+    font-size: 1.5rem !important;
+  }
 }
 
 /* ================================================================
@@ -1050,12 +1063,39 @@ img {
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 88px 16px 40px;
+    padding: 88px 14px 40px;
     gap: 28px;
   }
   .hero-image-col {
     width: 220px;
     height: 220px;
+  }
+  .hero-content p {
+    font-size: 14px !important;
+    padding: 0 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-section {
+    padding: 82px 10px 36px;
+    gap: 24px;
+  }
+  .hero-image-col {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-name-heading {
+    font-size: 1.3rem !important;
+  }
+  .hero-content > div:first-of-type {
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  .hero-content > div:first-of-type > div {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 7px !important;
   }
 }
 
@@ -1114,6 +1154,15 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .skills-ring-wrapper {
+    transform: scale(0.42);
+    margin: -120px 0;
+  }
+  .skills-section {
+    padding: 40px 16px !important;
+  }
+}
 /* ================================================================
    RESPONSIVE — SERVICES GRID
    ================================================================ */
@@ -1130,6 +1179,12 @@ img {
   .services-grid {
     grid-template-columns: 1fr;
   }
+  .services-why-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .services-why-grid img {
+    height: 180px !important;
+  }
 }
 
 /* ================================================================
@@ -1145,6 +1200,11 @@ img {
 @media (max-width: 580px) {
   .contact-form-row {
     flex-direction: column;
+    gap: 10px;
+  }
+  .contact-form-row input {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -1210,9 +1270,26 @@ img {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .projects-card {
     width: 200px;
+    min-width: 180px;
+  }
+  .projects-card h3 {
+    font-size: 13px !important;
+  }
+  #projects > div:last-child {
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .projects-card {
+    width: 170px;
+    min-width: 160px;
+  }
+  .projects-card h3 {
+    font-size: 12px !important;
   }
 }
 
@@ -1264,3 +1341,26 @@ img {
 .lv9  { animation: lev 3s ease-in-out infinite 2.25s; }
 .lv10 { animation: lev 3s ease-in-out infinite 2.5s; }
 .lv11 { animation: lev 3s ease-in-out infinite 2.75s; }
+
+/* ================================================================
+   RESPONSIVE — SERVICES IMAGE GRID (Services component)
+   ================================================================ */
+
+@media (max-width: 640px) {
+  .services-image-grid {
+    gap: 20px !important;
+  }
+  .services-image-grid > div {
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-image-grid {
+    gap: 16px !important;
+  }
+  .services-image-grid > div {
+    transform: scale(0.85);
+  }
+}

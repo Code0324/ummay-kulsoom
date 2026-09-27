@@ -30,7 +30,7 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-600">What sets my work apart</p>
           </div>
 
-          <div style={{
+          <div className="services-why-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '16px',
@@ -38,10 +38,10 @@ export default function ServicesPage() {
             margin: '0 auto',
           }}>
             {[
-              '/images/services/web mentainence.png',
-              '/images/services/web-development.png',
+              '/images/services/custom-dashboard.png',
+              '/images/services/portfolio.png',
               '/images/services/chatbot.png',
-              '/images/services/ai automation.png',
+              '/images/services/ai-automation.png',
             ].map((img, i) => (
               <img
                 key={i}

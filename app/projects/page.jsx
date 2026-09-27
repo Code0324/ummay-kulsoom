@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-shopping-cart",
       gradient: "from-purple-400 to-pink-400",
-      image: "/images/project/ECommerce.png",
+      image: "/images/project/ecommerce.png",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-truck-fast",
       gradient: "from-cyan-400 to-blue-400",
-      image: "/images/project/Q-Commerce Solution.png",
+      image: "/images/project/ecommerce.png",
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-house",
       gradient: "from-orange-400 to-red-400",
-      image: "/images/project/Luxe Living - Real Estate.png",
+      image: "/images/project/Luxe Living .png",
     },
     {
       id: 5,
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-file-pdf",
       gradient: "from-red-400 to-pink-500",
-      image: "/images/project/Resume Builder app.jpeg",
+      image: "/images/project/Resume Builder app.png",
     },
     {
       id: 17,
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-calculator",
       gradient: "from-yellow-400 to-orange-400",
-      image: "/images/project/calculator app.png",
+      // image missing - falls back to gradient icon
     },
     {
       id: 18,
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
       category: "Full-Stack",
       icon: "fas fa-ship",
       gradient: "from-sky-400 to-blue-600",
-      image: "/images/project/Karchi port vessel tracker.jpeg",
+      image: "/images/project/Karchi port vessel tracker.png",
     },
     {
       id: 8,

@@ -38,7 +38,7 @@ export default function Services() {
         Comprehensive solutions tailored to your digital needs
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto" style={{ gap: '32px', alignItems: 'start' }}>
+      <div className="services-image-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto" style={{ gap: '32px', alignItems: 'start' }}>
         {services.map((service) => (
           <div
             key={service.title}

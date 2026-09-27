@@ -116,7 +116,8 @@ export default function BouncingBubbles() {
       <p className="text-center text-xs font-semibold tracking-widest uppercase text-gray-400 mb-4">Dev Tools</p>
       <div
         ref={containerRef}
-        className="relative w-full h-[400px] rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden"
+        className="relative w-full rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden"
+            style={{ maxHeight: '400px', height: 'min(400px, 80vw)' }}
       >
         {TOOLS.map((tool, i) => (
           <div

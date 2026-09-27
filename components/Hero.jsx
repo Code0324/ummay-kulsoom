@@ -143,7 +143,7 @@ export default function Hero() {
             alt="Ummay Kulsoom — AI Engineer & Full-Stack Developer"
             width={320}
             height={320}
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
             style={{
               width: '100%',

@@ -7,7 +7,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-house",
     gradient: "linear-gradient(135deg, #fb923c, #f87171)",
-    image: "/images/project/Luxe Living - Real Estate.jpg",
+    image: "/images/project/Luxe Living .png",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-utensils",
     gradient: "linear-gradient(135deg, #818cf8, #c084fc)",
-    image: "/images/project/foodTuck Resturant Plateform.jpg",
+    image: "/images/project/foodTuck Resturant Plateform.png",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-plug",
     gradient: "linear-gradient(135deg, #60a5fa, #22d3ee)",
-    image: "/images/project/Home Appliences.jpg",
+    image: "/images/project/Home Appliences.png",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-shopping-cart",
     gradient: "linear-gradient(135deg, #34d399, #059669)",
-    image: "/images/project/ECommerce.jpg",
+    image: "/images/project/ecommerce.png",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-file-pdf",
     gradient: "linear-gradient(135deg, #f87171, #ec4899)",
-    image: "/images/project/Resume Builder app.jpeg",
+    image: "/images/project/Resume Builder app.png",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-calculator",
     gradient: "linear-gradient(135deg, #fbbf24, #f97316)",
-    image: "/images/project/calculator app.png",
+    // image missing - falls back to gradient icon
   },
   {
     id: 12,
@@ -63,7 +63,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-ship",
     gradient: "linear-gradient(135deg, #0ea5e9, #2563eb)",
-    image: "/images/project/Karchi port vessel tracker.jpeg",
+    image: "/images/project/Karchi port vessel tracker.png",
   },
   {
     id: 8,
@@ -103,7 +103,7 @@ const realProjects = [
     category: "Full-Stack",
     icon: "fas fa-truck-fast",
     gradient: "linear-gradient(135deg, #22d3ee, #60a5fa)",
-    image: "/images/project/Q-Commerce Solution.jpg",
+    image: "/images/project/ecommerce.png",
   },
   {
     id: 14,
