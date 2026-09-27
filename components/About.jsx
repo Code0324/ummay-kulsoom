@@ -58,10 +58,11 @@ export default function About() {
           </div>
 
           <p className="text-base leading-relaxed" style={{color:'#5a3800'}}>
-            I'm Ummay Kulsoom — an AI Engineer and Full-Stack Developer
-            based in Karachi, Pakistan. I build intelligent, production-ready
-            applications using Claude API, Next.js, FastAPI, and modern AI tools.
-            Certified by GIAIC · Freelancing on Upwork at $25/hr.
+            I'm an AI Automation Engineer and Full-Stack Developer who builds
+            intelligent AI-powered applications, agents, and business automation
+            solutions. Using Python, FastAPI, Next.js, and modern AI technologies,
+            I turn complex business processes into simple, efficient, and scalable
+            digital experiences.
           </p>
 
           <div className="space-y-3 text-sm" style={{color:'#7a4500'}}>
