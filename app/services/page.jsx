@@ -1,5 +1,9 @@
 import Services from '@/components/Services'
 import Link from 'next/link'
+import { services } from '@/lib/siteData'
+
+const whyChoose = ['custom-dashboards', 'portfolio', 'ai-chatbots', 'business-automation']
+  .map(slug => services.find(s => s.slug === slug))
 
 export const metadata = {
   title: 'Services - Ummay Kulsoom',
@@ -30,31 +34,20 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-600">What sets my work apart</p>
           </div>
 
-          <div className="services-why-grid" style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '16px',
-            maxWidth: '900px',
-            margin: '0 auto',
-          }}>
-            {[
-              '/images/services/custom-dashboard.png',
-              '/images/services/portfolio.png',
-              '/images/services/chatbot.png',
-              '/images/services/ai-automation.png',
-            ].map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`Why ${i + 1}`}
-                style={{
-                  width: '100%',
-                  height: '220px',
-                  objectFit: 'cover',
-                  borderRadius: '16px',
-                  display: 'block',
-                }}
-              />
+          {/* Class name avoids "service" — a global [class*="service"] rule
+              would otherwise paint a white glass box behind the grid. */}
+          <div className="why-grid grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {whyChoose.map((item, i) => (
+              <div key={item.slug} className="crystal-tile">
+                <div className="crystal-frame crystal-glass" style={{ aspectRatio: '4 / 5' }}>
+                  <img src={item.image} alt={item.title} loading="eager" decoding="async" />
+                  <span className="crystal-shine" style={{ animationDelay: `${i * 1.3}s` }} />
+                </div>
+                <div className="crystal-floor" style={{ marginTop: '6px' }} />
+                <h3 className="crystal-title text-center font-bold pt-2" style={{ fontSize: '15px' }}>
+                  {item.title}
+                </h3>
+              </div>
             ))}
           </div>
         </div>

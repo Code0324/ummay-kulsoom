@@ -1,25 +1,11 @@
 'use client'
 
-import Image from 'next/image'
+import Link from 'next/link'
+import { services } from '@/lib/siteData'
 
-const services = [
-  { title: 'Chatbot Development',     img: '/images/services/chatbot.png',          cls: 'lv0'  },
-  { title: 'Telegram Bot',            img: '/images/services/telegram-bot.png',      cls: 'lv1'  },
-  { title: 'CRM & Social Media',      img: '/images/services/crm.png',               cls: 'lv2'  },
-  { title: 'UI/UX Design',            img: '/images/services/uiux.png',              cls: 'lv3'  },
-  { title: 'AI Agent',                img: '/images/services/ai-agent.png',          cls: 'lv4'  },
-  { title: 'AI Automation',           img: '/images/services/ai-automation.png',     cls: 'lv5'  },
-  { title: 'SaaS AI',                 img: '/images/services/saas-ai.png',           cls: 'lv6'  },
-  { title: 'Portfolio Website',       img: '/images/services/portfolio.png',         cls: 'lv7'  },
-  { title: 'Custom Dashboard',        img: '/images/services/custom-dashboard.png',  cls: 'lv8'  },
-  { title: 'E-Commerce',              img: '/images/services/ecommerce.png',         cls: 'lv9'  },
-  { title: 'n8n Automation',          img: '/images/services/n8n-automation.png',    cls: 'lv10' },
-  { title: 'Mobile App',              img: '/images/services/mob-app.png',           cls: 'lv11' },
-]
-
-export default function Services() {
+export default function Services({ showViewAll = true }) {
   return (
-    <section id="services" className="py-16 px-6" style={{ background: 'transparent' }}>
+    <section id="services" className="py-16" style={{ background: 'transparent' }}>
 
       <h2
         className="text-3xl font-bold text-center mb-3"
@@ -34,44 +20,64 @@ export default function Services() {
         Our Services
       </h2>
 
-      <p className="text-center text-sm text-gray-400 mb-12">
-        Comprehensive solutions tailored to your digital needs
+      <p className="text-center text-sm text-gray-400 mb-10 px-6">
+        From AI agents to full-stack web apps — solutions that solve real business problems
       </p>
 
-      <div className="services-image-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto" style={{ gap: '32px', alignItems: 'start' }}>
-        {services.map((service) => (
-          <div
-            key={service.title}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', transition: 'all 0.3s ease' }}
-            onMouseEnter={e => { e.currentTarget.style.filter = 'drop-shadow(0 0 14px rgba(249,115,22,0.45))'; e.currentTarget.style.transform = 'scale(1.06)' }}
-            onMouseLeave={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.transform = 'scale(1)' }}
-          >
-            <div className={service.cls} style={{ position: 'relative' }}>
-              <div style={{ width: '160px', height: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                <Image
-                  src={service.img}
-                  alt={service.title}
-                  width={160}
-                  height={160}
-                  unoptimized={true}
-                  style={{ objectFit: 'contain', width: '160px', height: '160px', background: 'none' }}
-                />
+      <div className="crystal-marquee" style={{ padding: '12px 0 20px' }}>
+        <div className="crystal-track">
+          {[...services, ...services].map((service, i) => {
+            const hidden = i >= services.length
+            return (
+              <div key={`${service.slug}-${i}`} style={{ paddingRight: '32px' }} aria-hidden={hidden || undefined}>
+                <div className="crystal-tile" style={{ width: '260px' }}>
+                  <div className="crystal-frame crystal-glass" style={{ height: '325px' }}>
+                    <img
+                      src={service.image}
+                      alt={hidden ? '' : service.title}
+                      width={260}
+                      height={325}
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <span
+                      className="crystal-shine"
+                      style={{ animationDelay: `${(i % 6) * 1.1}s` }}
+                    />
+                  </div>
+                  <div className="crystal-floor" style={{ marginTop: '6px' }} />
+                  <div style={{ textAlign: 'center', paddingTop: '8px' }}>
+                    <h3 className="crystal-title" style={{ fontSize: '15px', fontWeight: 800, marginBottom: '4px' }}>
+                      {service.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: '12px',
+                        lineHeight: 1.5,
+                        color: 'rgba(26,10,0,0.6)',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                      }}
+                    >
+                      {service.shortDescription}
+                    </p>
+                  </div>
+                </div>
               </div>
-              {/* Glow shadow under image */}
-              <div style={{
-                position: 'absolute', bottom: '-8px', left: '50%',
-                transform: 'translateX(-50%)',
-                width: '90px', height: '14px',
-                background: 'radial-gradient(ellipse, rgba(249,115,22,0.2) 0%, transparent 70%)',
-                filter: 'blur(5px)',
-              }} />
-            </div>
-            <p style={{ fontSize: '12px', fontWeight: '600', textAlign: 'center', marginTop: '8px', color: '#1a0a00', width: '160px' }}>
-              {service.title}
-            </p>
-          </div>
-        ))}
+            )
+          })}
+        </div>
       </div>
+
+      {showViewAll && (
+        <div className="text-center" style={{ marginTop: '28px' }}>
+          <Link href="/services" className="gradient-button inline-block">
+            Explore All Services →
+          </Link>
+        </div>
+      )}
     </section>
   )
 }
